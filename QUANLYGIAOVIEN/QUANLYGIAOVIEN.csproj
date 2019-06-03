@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9B5A0B6F-41E5-4E13-9F5D-0B83FD880328}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QUANLYGIAOVIEN</RootNamespace>
+    <AssemblyName>QUANLYGIAOVIEN</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.18, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BUS\CHuyenNganh.cs" />
+    <Compile Include="BUS\DanhGia.cs" />
+    <Compile Include="BUS\GiaoVien.cs" />
+    <Compile Include="BUS\Luong.cs" />
+    <Compile Include="Controller\ChuanHoaChuoi.cs" />
+    <Compile Include="DoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoiMatKhau.Designer.cs">
+      <DependentUpon>DoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\ChuyenNganhDALL.cs" />
+    <Compile Include="DAL\DanhGiaDALL.cs" />
+    <Compile Include="DAL\GiaoVienDAL.cs" />
+    <Compile Include="DAL\LuongDALL.cs" />
+    <Compile Include="DAL\LuongGVDALL.cs" />
+    <Compile Include="Dta_ChuyenNganh.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dta_ChuyenNganh.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dta_DanhGia.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dta_DanhGia.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dta_giaovien.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dta_giaovien.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dta_luong.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dta_luong.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dta_TrinhDoHocVan.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dta_TrinhDoHocVan.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_ChiTietGiangDay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_ChiTietGiangDay.Designer.cs">
+      <DependentUpon>GUI_ChiTietGiangDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_ChuyenNganh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_ChuyenNganh.Designer.cs">
+      <DependentUpon>GUI_ChuyenNganh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_GiaoVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_GiaoVien.Designer.cs">
+      <DependentUpon>GUI_GiaoVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_DanhGia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_DanhGia.Designer.cs">
+      <DependentUpon>GUI_DanhGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_LuongGV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_LuongGV.Designer.cs">
+      <DependentUpon>GUI_LuongGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_MonHoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_MonHoc.Designer.cs">
+      <DependentUpon>GUI_MonHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_TrinhDoHocVan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_TrinhDoHocVan.Designer.cs">
+      <DependentUpon>GUI_TrinhDoHocVan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLyGiaoVienTieuHocDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyGiaoVienTieuHocDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyGiaoVienTieuHocDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyGiaoVienTieuHocDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyGiaoVienTieuHocDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyGiaoVienTieuHocDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TableManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableManager.Designer.cs">
+      <DependentUpon>TableManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\UserInfo.cs" />
+    <EmbeddedResource Include="DoiMatKhau.resx">
+      <DependentUpon>DoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_ChiTietGiangDay.resx">
+      <DependentUpon>GUI_ChiTietGiangDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_ChuyenNganh.resx">
+      <DependentUpon>GUI_ChuyenNganh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_GiaoVien.resx">
+      <DependentUpon>GUI_GiaoVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_DanhGia.resx">
+      <DependentUpon>GUI_DanhGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_LuongGV.resx">
+      <DependentUpon>GUI_LuongGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_MonHoc.resx">
+      <DependentUpon>GUI_MonHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_TrinhDoHocVan.resx">
+      <DependentUpon>GUI_TrinhDoHocVan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="TableManager.resx">
+      <DependentUpon>TableManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Dta_ChuyenNganh.xsc">
+      <DependentUpon>Dta_ChuyenNganh.xsd</DependentUpon>
+    </None>
+    <None Include="Dta_ChuyenNganh.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dta_ChuyenNganh.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dta_ChuyenNganh.xss">
+      <DependentUpon>Dta_ChuyenNganh.xsd</DependentUpon>
+    </None>
+    <None Include="Dta_DanhGia.xsc">
+      <DependentUpon>Dta_DanhGia.xsd</DependentUpon>
+    </None>
+    <None Include="Dta_DanhGia.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dta_DanhGia.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dta_DanhGia.xss">
+      <DependentUpon>Dta_DanhGia.xsd</DependentUpon>
+    </None>
+    <None Include="Dta_giaovien.xsc">
+      <DependentUpon>Dta_giaovien.xsd</DependentUpon>
+    </None>
+    <None Include="Dta_giaovien.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dta_giaovien.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dta_giaovien.xss">
+      <DependentUpon>Dta_giaovien.xsd</DependentUpon>
+    </None>
+    <None Include="Dta_luong.xsc">
+      <DependentUpon>Dta_luong.xsd</DependentUpon>
+    </None>
+    <None Include="Dta_luong.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dta_luong.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dta_luong.xss">
+      <DependentUpon>Dta_luong.xsd</DependentUpon>
+    </None>
+    <None Include="Dta_TrinhDoHocVan.xsc">
+      <DependentUpon>Dta_TrinhDoHocVan.xsd</DependentUpon>
+    </None>
+    <None Include="Dta_TrinhDoHocVan.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dta_TrinhDoHocVan.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dta_TrinhDoHocVan.xss">
+      <DependentUpon>Dta_TrinhDoHocVan.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QuanLyGiaoVienTieuHocDataSet.xsc">
+      <DependentUpon>QuanLyGiaoVienTieuHocDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyGiaoVienTieuHocDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyGiaoVienTieuHocDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyGiaoVienTieuHocDataSet.xss">
+      <DependentUpon>QuanLyGiaoVienTieuHocDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyGiaoVienTieuHocDataSet1.xsc">
+      <DependentUpon>QuanLyGiaoVienTieuHocDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyGiaoVienTieuHocDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyGiaoVienTieuHocDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyGiaoVienTieuHocDataSet1.xss">
+      <DependentUpon>QuanLyGiaoVienTieuHocDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyGiaoVienTieuHocDataSet2.xsc">
+      <DependentUpon>QuanLyGiaoVienTieuHocDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyGiaoVienTieuHocDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyGiaoVienTieuHocDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyGiaoVienTieuHocDataSet2.xss">
+      <DependentUpon>QuanLyGiaoVienTieuHocDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\giáo viên.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ảnh động.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
